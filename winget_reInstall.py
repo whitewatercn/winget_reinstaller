@@ -1,7 +1,8 @@
 #BatchInstall.py
 import os
-wingets = {"upgrade --all --accept-package-agreements ----accept-source-agreements" /
-        "Tencent.TencentMeeting","Tencent.WeChat"}
+wingets = {"Tencent.TencentMeeting","Tencent.WeChat"}
+os.system("winget" + "upgrade --all --accept-package-agreements ----accept-source-agreements")
+
 try:
     for winget in wingets:
         os.system("winget install "+winget)
